@@ -21,6 +21,7 @@ contract SocialNetwork {
     constructor() public {}
 
     function createPost(string memory _postContent) public {
+        require(bytes(_postContent).length > 0);
         postCount++;
         Posts[postCount] = Post(postCount, _postContent, msg.sender, 0);
         emit postCreated(postCount, _postContent, msg.sender, 0);

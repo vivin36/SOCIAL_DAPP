@@ -33,6 +33,13 @@ contract("SocialNetwork", ([deployer, author, tipper]) => {
     it("Create a post", async () => {
       assert.equal(postCount, 1);
       const event = result.logs[0].args;
+      assert.equal(event.authour, author, "author is correct");
+      assert.equal(event.id.toNumber(), postCount.toNumber(), "id is correct");
+      assert.equal(
+        event.postContent,
+        "This is my first post",
+        "author is correct"
+      );
     });
   });
 });
