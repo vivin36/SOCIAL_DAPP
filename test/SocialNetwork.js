@@ -20,4 +20,19 @@ contract("SocialNetwork", ([deployer, author, tipper]) => {
       assert.notEqual(address, undefined);
     });
   });
+  describe("Post", async () => {
+    let result, postCount;
+
+    before(async () => {
+      result = await socialNetwork.createPost("This is my first post", {
+        from: author
+      });
+      postCount = await socialNetwork.postCount();
+    });
+
+    it("Create a post", async () => {
+      assert.equal(postCount, 1);
+      const event = result.logs[0].args;
+    });
+  });
 });
