@@ -4,7 +4,8 @@ Basic Social Networking DAPP using Ethereum
 
 ## Installation
 
-Use the Ganache [Ganache](https://www.trufflesuite.com/ganache#) to mock local blockchain.
+Use the [Ganache](https://www.trufflesuite.com/ganache#) to mock local blockchain.
+Install Truffle for Deploying contracts
 
 ```bash
 npm install truffle -g
