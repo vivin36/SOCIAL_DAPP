@@ -26,5 +26,16 @@ npm start
 
 ```bash
 truffle compile
-truffle Migrate
+```
+
+## Migrate Contracts 
+
+```bash
+truffle migrate
+```
+
+## Test Contracts 
+
+```bash
+truffle test
 ```
